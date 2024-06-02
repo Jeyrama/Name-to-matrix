@@ -20,3 +20,16 @@ Examples:
 
 
 // Solution
+
+const matrixfy = str => {
+  const l =  Math.ceil(Math.sqrt(str.length))
+  const arr = []
+  let k = 0
+  for(let i=0; i<l; i++){
+    arr.push([])
+    for(let j=0; j<l; j++){
+      arr[i].push(str[k++]||'.')
+    }
+  }
+  return arr.length?arr:'name must be at least one letter'
+}
