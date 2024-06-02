@@ -33,3 +33,5 @@ const matrixfy = str => {
   }
   return arr.length?arr:'name must be at least one letter'
 }
+
+// or
