@@ -35,3 +35,21 @@ const matrixfy = str => {
 }
 
 // or
+
+function matrixfy (str) {
+  if (str.length == 0) {
+    return 'name must be at least one letter'
+  }
+  const len = Math.ceil(Math.sqrt(str.length))
+  str += '.'.repeat(len * len - str.length)
+  const result = new Array(len)
+
+  for (let i = 0; i < len; i++) {
+      const array = new Array(len)
+      for (let j = 0; j < len; j++) {
+          array[j] = str[len * i + j]
+      }
+      result[i] = array
+  }
+  return result
+}
